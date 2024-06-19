@@ -12,11 +12,9 @@ fn main() {
 
     //Convert Expression to Vector of Tokens
     let tokens: Vec<Token> = tokenize(expression);
-    println!("Tokens: {:?}", tokens);
 
     //Sort the Tokens in to Reverse Polish Notation
     let rpn: Vec<Token> = infix_to_rpn(tokens.clone());
-    println!("RPN: {:?}", rpn);
 
     //Evaluate the Expression
     match evaluate_rpn(rpn) {
